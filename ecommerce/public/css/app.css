@@ -1,6 +1,17 @@
-html {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'fantasy';
+  color: rgb(212, 95, 95);
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+body {
+  background-image: url('/css/image/ticket.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.formulario {
+  backdrop-filter: blur(10px);
 }
