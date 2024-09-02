@@ -2,7 +2,7 @@
 
 @section('content')
     <section>
-        <div class="container col-md-5 mt-5">
+        <div class="container col-md-6 mt-5">
             <form class="formulario border border-dark rounded p-4" action="">
                 <h2 class="text-center">Login</h2>
                 <div class="form-group">

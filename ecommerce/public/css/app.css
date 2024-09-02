@@ -3,11 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'fantasy';
-  color: rgb(212, 95, 95);
 }
 
 body {
-  background-image: url('/css/image/ticket.jpg');
+  background-image: url('/css/image/text.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
