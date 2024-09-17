@@ -1,8 +1,7 @@
 @extends('master')
 
 @section('content')
-<a href="{{ route('login.index') }}">Login</a>
+    <section>
 
-<h2>Home</h2>
-    
+    </section>
 @endsection
