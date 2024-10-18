@@ -4,8 +4,8 @@
     <section>
         <div class="d-flex justify-content-center mt-5">
             <div class="form-container">
-                <p class="title">Login</p>
-                <form class="form" action="{{route('login.auth')}}" method="post">
+                <p class="title">Cadastre-se</p>
+                <form class="form" action="{{route('login.store')}}" method="post">
                     @csrf
                     <div class="input-group">
                         <label for="email">Email</label>
@@ -14,11 +14,10 @@
                     <div class="input-group">
                         <label for="password">Senha</label>
                         <input type="password" name="password" id="password" placeholder="Senha">
-                        <div class="forgot">
-                            <a rel="noopener noreferrer" href="#">Esqueceu a senha?</a>
-                        </div>
+                        <label for="passwordConfirma">Repita senha</label>
+                        <input class="mb-3" type="password" name="passwordConfirma" id="passwordConfirma" placeholder="Cofirmar a senha">
                     </div>
-                    <button class="sign" type="submit">Login</button>
+                    <button class="sign" type="submit">Cadastrar</button>
                 </form>
                 <div class="social-message">
                     <div class="line"></div>
@@ -48,8 +47,8 @@
                         </svg>
                     </button>
                 </div>
-                <p class="signup">Ainda não tem conta?
-                    <a rel="noopener noreferrer" href="{{route('login.create')}}" class="">Crie uma conta</a>
+                <p class="signup">Já tem conta?
+                    <a rel="noopener noreferrer" href="#" class="">Faça seu login aqui</a>
                 </p>
             </div>
         </div>
