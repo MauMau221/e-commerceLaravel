@@ -3,7 +3,7 @@
         <nav class="navbar navbar-dark navbar-expand-lg flex-column align-items-stretch">
             <div class="d-flex justify-content-center">
                 <div class="mr-auto">
-                    <a class="navbar-brand" href="{{ route('home') }}"><img src="/css/image/logo.png" width="35"
+                    <a class="navbar-brand" href="{{ route('index.home') }}"><img src="/css/image/logo.png" width="35"
                             height="40" alt=""> Ryzer </a>
                 </div>
 
@@ -31,7 +31,7 @@
             <div class="">
                 <ul class="navbar-nav mr-auto justify-content-center">
                     <li class="nav-item active p-1 mx-3 ">
-                        <a class="nav-link" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link" href="{{ route('index.home') }}">Home</a>
                     </li>
                     <li class="nav-item active p-1 mx-3">
                         <a class="nav-link" href="#">Suplementos</a>

@@ -17,12 +17,23 @@
 
 <body>
     @if ($mensagem = Session::get('erro'))
-        {{ $mensagem }}
+        <div class="alert alert-danger">
+            {{ $mensagem }}
+        </div>
     @endif
+    
+    @if ($mensagem = Session::get('success'))
+        <div class="alert alert-success">
+            {{ $mensagem }}
+        </div>
+    @endif
+
     @if ($errors->any())
-        @foreach ($errors as $error)
-            {{$error}} <br>
-        @endforeach
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                {{ $error }} <br>
+            @endforeach
+        </div>
     @endif
 
     @include('nav.nav')

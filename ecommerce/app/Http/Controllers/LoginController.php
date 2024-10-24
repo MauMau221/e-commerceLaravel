@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -13,32 +14,6 @@ class LoginController extends Controller
     public function index()
     {
         return view('login.login');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function auth(Request $request) 
-    {
-        $credencias = $request->validate(
-            [
-                'email' => ['required', 'email'],
-                'password' => ['required'],
-            ],
-            [
-                'email' . 'required' => 'O campo email é obrigatorio!',
-                'email' . 'email' => 'O email não é válido!',
-                'password' . 'required' => 'O campo senha é obrigatorio!',
-            ]
-        );
-
-        if (Auth::attempt($credencias)) {
-            $request->session()->regenerate();
-            
-            return redirect()->intended('/');
-        } else {
-            return redirect()->back()->with('erro', 'Usuario ou senha inválida.');
-        }
     }
 
     /**
@@ -54,7 +29,33 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+            'password_confirmation' => 'required|string|min:8',
+        ],
+        [
+            'name.required' => 'O campo nome é obrigatorio',
+            'email.required' => 'O campo email é obrigatorio',
+            'password.required' => 'O campo senha é obrigatorio',
+            'password.min' => 'A senha deve ter no minimo 8 caracteres',
+            'email.email' => 'Email inválido',
+            'password_confirmation.required' => 'O campo confirmação de senha é obrigatorio',
+            'password.confirmed' => 'A senha não está igual',
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'email_verified_at' => now(),
+        ]);
+        if ($user) {
+            return redirect()->route('login.index')->with('success', 'Usuário registrado com sucesso');
+        }else {
+            return redirect()->back()->with('erro', 'Usuario ou senha inválida.');
+        }
     }
 
     /**
@@ -62,7 +63,8 @@ class LoginController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::find($id);
+        return view('login.edit', $user);
     }
 
     /**
@@ -76,8 +78,14 @@ class LoginController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy()
-    {
-        var_dump('login.logout');
+    public function destroy(string $id)
+    {   
+        $user = User::find($id);
+        if($user){
+            $user->delete();
+            return redirect()->route('index.home')->with('success', 'Usuário deletado com sucesso');
+        }else{
+            return with('erro', 'ID do item não encontrado no banco de dados');
+        }
     }
 }

@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-center mt-5">
             <div class="form-container">
                 <p class="title">Login</p>
-                <form class="form" action="{{route('login.auth')}}" method="post">
+                <form class="form" action="{{route('login.index')}}" method="post">
                     @csrf
                     <div class="input-group">
                         <label for="email">Email</label>
@@ -18,6 +18,7 @@
                             <a rel="noopener noreferrer" href="#">Esqueceu a senha?</a>
                         </div>
                     </div>
+                    <input class="check" type="checkbox" name="remember"> Lembrar-me
                     <button class="sign" type="submit">Login</button>
                 </form>
                 <div class="social-message">

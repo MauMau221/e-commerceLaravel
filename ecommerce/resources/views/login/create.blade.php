@@ -8,6 +8,10 @@
                 <form class="form" action="{{route('login.store')}}" method="post">
                     @csrf
                     <div class="input-group">
+                        <label for="name">Nome</label>
+                        <input type="name" name="name" id="name" placeholder="Informe seu nome">
+                    </div>
+                    <div class="input-group">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="Email">
                     </div>
@@ -15,7 +19,7 @@
                         <label for="password">Senha</label>
                         <input type="password" name="password" id="password" placeholder="Senha">
                         <label for="passwordConfirma">Repita senha</label>
-                        <input class="mb-3" type="password" name="passwordConfirma" id="passwordConfirma" placeholder="Cofirmar a senha">
+                        <input class="mb-3" type="password" name="password_confirmation" id="password_confirmation" placeholder="Cofirmar senha">
                     </div>
                     <button class="sign" type="submit">Cadastrar</button>
                 </form>
