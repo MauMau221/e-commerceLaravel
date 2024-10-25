@@ -18,6 +18,7 @@ return new class extends Migration
             $table->double('preco', 8, 2);
             $table->double('desconto', 8, 2);
             $table->decimal('status', 8, 2);
+            $table->text('url');
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade'); //relacionamento, deleta os produtos que o usuario criou
 

@@ -29,7 +29,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
                     <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
+                        <h5 class="card-title">Creatina</h5>
                         <p class="card-text">Descrição do produto</p>
                         <a href="#" class="btn btn-primary">Visitar</a>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
                     <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
+                        <h5 class="card-title">Wey</h5>
                         <p class="card-text">Descrição do produto</p>
                         <a href="#" class="btn btn-primary">Visitar</a>
                     </div>
