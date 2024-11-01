@@ -1,5 +1,8 @@
 @extends('master')
 
+@include('nav.nav')
+
+@section('title', 'Home')
 @section('content')
     <div id="ads" class="carousel slide m-3" data-ride="carousel">
         <div class="carousel-inner">

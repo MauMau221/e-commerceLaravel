@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/login/login.css">
     <script src="https://kit.fontawesome.com/482af9f33c.js" crossorigin="anonymous"></script> <!--Kit de Icones -->
-    <title>Ingresso</title>
+    <title>@yield('title')</title>
 </head>
 
 <body>
@@ -35,8 +35,6 @@
             @endforeach
         </div>
     @endif
-
-    @include('nav.nav')
 
     @yield('content')
 
