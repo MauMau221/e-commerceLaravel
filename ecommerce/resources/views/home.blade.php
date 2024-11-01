@@ -28,96 +28,19 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper mb-3">
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Creatina</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
+            @foreach ($itens as $item)
+                <div class="swiper-slide">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $item->nome }}</h5>
+                            <p class="card-text">
+                                {{ strlen($item->desc) > 30 ? substr($item->desc, 0, 30) . '...' : $item->desc }}</p>
+                            <a href="#" class="btn btn-primary">Visitar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Wey</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Descrição do produto</p>
-                        <a href="#" class="btn btn-primary">Visitar</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="swiper-pagination"></div>
     </div>
