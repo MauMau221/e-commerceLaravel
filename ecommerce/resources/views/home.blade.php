@@ -44,4 +44,7 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
+    <div class="d-flex justify-content-center">
+        {{ $itens->links('pag.paginate') }}
+    </div>
 @endsection

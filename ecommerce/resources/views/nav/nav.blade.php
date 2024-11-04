@@ -31,7 +31,10 @@
                                 </button>
                                 <div class="dropdown-menu mt-3 m-0 p-0" aria-labelledby="dropdownMenuButton">
                                     @if (auth()->check())
-                                        <p>Bem-vindo, {{ auth()->user()->name }}!</p>
+                                        <div class="d-flex justify-content-center">
+                                            <button
+                                                class="btn btn-secondary btn-sm justify-content-center">Sair</button>
+                                        </div>
                                     @else
                                         <div class="form-container border border-dark">
                                             <p class="title">Login</p>
@@ -95,7 +98,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mt-1" href="{{ route('login.index') }}"><i
+                            <a class="nav-link mt-3" href="{{ route('login.index') }}"><i
                                     class="fa-solid fa-cart-shopping fa-xl"></i></a>
                         </li>
                     </ul>
