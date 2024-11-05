@@ -28,7 +28,7 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper mb-3">
-            @foreach ($itens as $item)
+            @foreach ($itens->take(6) as $item)
                 <div class="swiper-slide">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
@@ -45,6 +45,6 @@
         <div class="swiper-pagination"></div>
     </div>
     <div class="d-flex justify-content-center">
-        {{ $itens->links('pag.paginate') }}
+        {{-- {{ $itens->links('pag.paginate') }} Caso precise ativar paginação, em conjunto com o blade paginate MATERIALIZE--}}
     </div>
 @endsection

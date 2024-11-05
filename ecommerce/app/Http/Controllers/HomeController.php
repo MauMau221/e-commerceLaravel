@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $itens = Produto::paginate(3)->withQueryString();
+        $itens = Produto::all();
 
         return view('home', ['itens' => $itens]);
     }
