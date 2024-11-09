@@ -19,11 +19,11 @@ body {
 }
 
 .dropdown-menu {
-  border-radius: 10%;
-  left: 30px;
-  right: 0;
+  border-radius: 5%;
+  left: auto;
+  right: 0px;
   overflow: hidden;
-  background-color: #545b62;
+  background-color: #3A3B3C;
 }
 
 /*Carrosel biblioteca*/

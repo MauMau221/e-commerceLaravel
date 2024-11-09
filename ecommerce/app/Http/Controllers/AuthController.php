@@ -52,4 +52,5 @@ class AuthController extends Controller
             return redirect()->back()->with('erro', 'Usuario ou senha inválida.');
         }
     }
+
 }

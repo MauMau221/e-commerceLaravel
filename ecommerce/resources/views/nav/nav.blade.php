@@ -29,15 +29,18 @@
                                         Login
                                     @endif
                                 </button>
-                                <div class="dropdown-menu mt-2 m-0 p-0" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-menu mt-2 m-0 p-2" aria-labelledby="dropdownMenuButton">
                                     @if (auth()->check())
                                         <a class="dropdown-item" href="#">Alguma ação</a>
                                         <a class="dropdown-item" href="#">Outra ação</a>
                                         <a class="dropdown-item" href="#">Alguma coisa aqui</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Link separado</a>
+                                        <form action="{{ route('login.logout') }}" method="post">
+                                            @csrf
+                                            <button type="submit" class="btn dropdown-item">Logout</button>
+                                        </form>
                                     @else
-                                        <div class="form-container border border-dark">
+                                        <div class="form-container testando border border-dark">
                                             <p class="title">Login</p>
                                             <form class="form" action="{{ route('login.index') }}" method="post">
                                                 @csrf

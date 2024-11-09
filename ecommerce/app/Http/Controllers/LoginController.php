@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -78,14 +79,13 @@ class LoginController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function logout(Request $request)
     {   
-        $user = User::find($id);
-        if($user){
-            $user->delete();
-            return redirect()->route('index.home')->with('success', 'Usuário deletado com sucesso');
-        }else{
-            return with('erro', 'ID do item não encontrado no banco de dados');
-        }
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        
+        return redirect('/')->with('success', 'Logout OK!.');
     }
 }
