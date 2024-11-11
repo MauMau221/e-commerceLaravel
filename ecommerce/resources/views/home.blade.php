@@ -27,24 +27,41 @@
     </div>
     <!-- Swiper -->
     <div class="swiper mySwiper">
-        <div class="swiper-wrapper mb-3">
+        <div class="swiper-wrapper">
             @foreach ($itens->take(6) as $item)
                 <div class="swiper-slide">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 23rem;">
                         <img class="card-img-top" src="css/image/image.png" alt="Imagem de capa do card">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->nome }}</h5>
-                            <p class="card-text">
-                                {{ strlen($item->desc) > 30 ? substr($item->desc, 0, 30) . '...' : $item->desc }}</p>
-                            <a href="#" class="btn btn-primary">Visitar</a>
+                            <div class="mb-2">
+                                <div class="d-flex">
+                                    <div class="mr-2">
+                                        <strong>R$ {{ $item->preco }}</strong>
+                                    </div>
+                                    <div class="">
+                                        <span></span>
+                                    </div>
+                                    <div class="">s</div>
+                                </div>
+                                <div>
+                                    <a href="#" class=""><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination justify-content-center mt-3"></div>
+    </div>
+    <div class="d-flex flex-column bd-highlight mb-3 p-2 m-2">
+        <div class="p-2 itemteste bd-highlight">Flex item 1</div>
+        <div class="p-2 itemteste bd-highlight">Flex item 2</div>
+        <div class="p-2 itemteste bd-highlight">Flex item 3</div>
     </div>
     <div class="d-flex justify-content-center">
-        {{-- {{ $itens->links('pag.paginate') }} Caso precise ativar paginação, em conjunto com o blade paginate MATERIALIZE--}}
+        {{-- {{ $itens->links('pag.paginate') }} Caso precise ativar paginação, em conjunto com o blade paginate MATERIALIZE --}}
     </div>
 @endsection
