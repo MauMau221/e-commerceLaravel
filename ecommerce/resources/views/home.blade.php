@@ -17,19 +17,21 @@
                         <a href="#" class="nav-link text-white">Politica de privacidade</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Quero me cadastrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Entrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </li>
-                </ul>
+                <div class="align-self-start">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">Quero me cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
