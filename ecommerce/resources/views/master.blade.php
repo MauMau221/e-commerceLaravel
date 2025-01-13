@@ -15,7 +15,8 @@
     <title>@yield('title')</title>
 </head>
 
-<body>
+<body style="min-width: 372px;">
+    
     @if ($mensagem = Session::get('erro'))
         <div class="alert alert-danger">
             {{ $mensagem }}
@@ -49,22 +50,6 @@
     </script>
     <!--Kit de Icones -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
 
 </body>
 
