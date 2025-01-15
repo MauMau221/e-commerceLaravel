@@ -6,7 +6,7 @@
 
 @section('content')
     <section>
-        <div class="d-flex justify-content-center mt-5">
+        <div class="login d-flex justify-content-center mt-5">
             <div class="form-container">
                 <p class="title">Login</p>
                 <form class="form" action="{{route('login.index')}}" method="post">
