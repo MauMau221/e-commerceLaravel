@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/login/login.css">
     <script src="https://kit.fontawesome.com/482af9f33c.js" crossorigin="anonymous"></script> <!--Kit de Icones -->
-    <title>@yield('title')</title>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
 
 <body style="min-width: 372px;">

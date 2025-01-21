@@ -5,7 +5,7 @@
 
     @include('header.header')
 
-    <main class="mb-5 pb-5 mb-md-0">
+    <main>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-5">
@@ -370,6 +370,10 @@
             </div>
         </div>
     </main>
+
+    <div style="height: 273px;" class="d-block d-md-none"></div>
+    <div style="height: 153px;" class="d-none d-md-block d-lg-none"></div>
+    <div style="height: 129px;" class="d-none d-lg-block"></div>
 
     @include('footer.footer')
 @endsection
