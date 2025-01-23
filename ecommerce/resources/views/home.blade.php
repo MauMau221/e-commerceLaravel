@@ -54,8 +54,9 @@
                 </div>
             </div>
             <hr class="mt-3">
-            <div class="row">
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6
+                my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -78,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -101,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -147,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -170,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -193,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -216,7 +217,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -239,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -262,7 +263,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -285,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
@@ -308,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch my-2">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute custom-position p-3 text-danger">
                             <i class="fa-regular fa-heart fa-2xl"></i>
