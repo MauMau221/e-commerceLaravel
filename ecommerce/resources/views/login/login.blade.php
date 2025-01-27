@@ -2,12 +2,10 @@
 
 @include('nav.nav')
 
-@section('title', 'Login')
-
 @section('content')
     <section>
         <div class="login d-flex justify-content-center mt-5">
-            <div class="form-container">
+            <div class="form-container bg-danger">
                 <p class="title">Login</p>
                 <form class="form" action="{{route('login.index')}}" method="post">
                     @csrf
