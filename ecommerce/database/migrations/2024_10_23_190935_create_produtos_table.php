@@ -15,16 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->text('desc');
-            $table->double('preco', 8, 2);
-            $table->double('desconto', 8, 2);
-            $table->decimal('status', 8, 2);
-            $table->text('url');
+            $table->decimal('preco', 10, 2);
+            $table->decimal('desconto', 10, 2);
+            $table->integer('status');
+            $table->string('url');
             $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade'); //relacionamento, deleta os produtos que o usuario criou
-
             $table->unsignedBigInteger('id_categoria');
-            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
+        
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade');
         });
     }
 

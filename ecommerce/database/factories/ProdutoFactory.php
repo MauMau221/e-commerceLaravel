@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Categoria;
+use App\Models\Estoque;
+use App\Models\Produto;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,8 +27,17 @@ class ProdutoFactory extends Factory
             'desconto' => $this->faker->randomNumber(2),
             'status' => $this->faker->randomNumber(2),
             'url' => $this->faker->imageUrl(400, 400),
-            'id_user' => User::pluck('id')->random(),
-            'id_categoria' => Categoria::pluck('id')->random(),
+            'id_user' => User::inRandomOrder()->first()->id ?? User::factory()->create()->id,
+            'id_categoria' => Categoria::inRandomOrder()->first()->id ?? Categoria::factory()->create()->id,
         ];
+    }
+
+    public function configure()
+    {
+        return $this->afterCreating(function (Produto $produto) {
+            Estoque::factory()->create([
+                'produto_id' => $produto->id,
+            ]);
+        });
     }
 }
