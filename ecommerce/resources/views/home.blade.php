@@ -3,6 +3,12 @@
 @section('content')
     @include('nav.nav')
 
+    @if (empty($itens))
+        <div class="alert alert-danger mt-0">
+            <p>Itens não encontrados</p>
+        </div>
+    @endif
+
     @include('header.header')
 
     <main>
@@ -79,259 +85,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
+                @foreach ($itens as $item)
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-1">
+                        <div class="card text-center bg-light">
+                            <a href="#" class="position-absolute custom-position p-3 text-danger">
+                                <i class="fa-regular fa-heart fa-2xl"></i>
+                            </a>
+                            <img src="/css/image/card/image.png" class="card-img-top">
+                            <div class="card-header">
+                                R${{ number_format($item['preco'],2,',',',')}}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $item['nome']}}</h5>
+                                <p class="card-text encurtar-3l">{{ $item['desc']}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <form action="" class="d-block">
+                                    <button class="btn btn-danger btn-sm">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </form>
+                                <small class="text-success">320,5kg em estoque</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
-                    <div class="card text-center bg-light">
-                        <a href="#" class="position-absolute custom-position p-3 text-danger">
-                            <i class="fa-regular fa-heart fa-2xl"></i>
-                        </a>
-                        <img src="/css/image/card/image.png" class="card-img-top">
-                        <div class="card-header">
-                            R$4,50
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Creatina</h5>
-                            <p class="card-text encurtar-3l">Creatina com betalamina e mix de pré treino</p>
-                        </div>
-                        <div class="card-footer">
-                            <form action="" class="d-block">
-                                <button class="btn btn-danger btn-sm">
-                                    Adicionar ao Carrinho
-                                </button>
-                            </form>
-                            <small class="text-success">320,5kg em estoque</small>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <hr class="mt-3">
             <div class="row pb-4">

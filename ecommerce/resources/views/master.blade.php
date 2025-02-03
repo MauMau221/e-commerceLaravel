@@ -16,7 +16,7 @@
 </head>
 
 <body style="min-width: 372px;">
-    
+
     @if ($mensagem = Session::get('erro'))
         <div class="alert alert-danger">
             {{ $mensagem }}

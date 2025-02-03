@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-danger border-bottom shadow-sm mb-3">
+<nav class="navbar navbar-expand-md navbar-dark bg-danger border-bottom shadow-s">
     <div class="container">
         <a class="navbar-brand" href="{{route('index.home')}}"><strong>Ecommerce Online</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
